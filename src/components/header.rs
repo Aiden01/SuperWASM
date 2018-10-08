@@ -1,32 +1,36 @@
 
 use yew::prelude::*;
+use yew::services::ConsoleService;
 
-pub struct Model;
-
-pub enum Msg {
-    Ok
+pub struct HeaderComp {
+    console: ConsoleService
 }
 
-impl Component for Model {
+
+impl Component for HeaderComp {
 
     type Properties = ();
-    type Message = Msg; 
+    type Message = (); 
 
     fn create(_: Self::Properties, _: ComponentLink<Self>) -> Self {
-        Model{}
+        HeaderComp{
+            console: ConsoleService::new()
+        }
     }
 
     fn update(&mut self, _: Self::Message) -> ShouldRender {
+        self.console.log("hello world");
         true
     }
-
 }
 
-impl Renderable<Model> for Model {
+impl Renderable<HeaderComp> for HeaderComp {
     fn view(&self) -> Html<Self> {
         html! {
-            <h1>{ "asdasdaasd" }</h1>
-            <div class="absolute pin-t h-2 w-full bg-blue",></div>
+            <div class="headercomp bg-red w-full h-full",>
+                <h1>{ "teeeeeeest" }</h1>
+                <div class="absolute pin-t h-2 w-full bg-blue",></div>
+            </div>
         }
     }
 }
