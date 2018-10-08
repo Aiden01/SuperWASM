@@ -27,10 +27,7 @@ impl Component for HeaderComp {
 impl Renderable<HeaderComp> for HeaderComp {
     fn view(&self) -> Html<Self> {
         html! {
-            <div class="headercomp bg-red w-full h-full",>
-                <h1>{ "teeeeeeest" }</h1>
-                <div class="absolute pin-t h-2 w-full bg-blue",></div>
-            </div>
+            <div class="absolute pin-t h-2 w-full bg-blue",></div>
         }
     }
 }

@@ -39,8 +39,8 @@ impl Component for Model {
 impl Renderable<Model> for Model {
     fn view(&self) -> Html<Self> {
         html! {
-            <div class="container mx-auto",>
-                <HeaderCmp/>
+            <div>
+                <HeaderComp: />
                 <h1 class="text-grey-darkest text-center mt-12 text-5xl",>{ "Super" }<span class="font-black",>{ "WASM" }</span></h1>
             </div>
         }
