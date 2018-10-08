@@ -27,7 +27,11 @@ impl Component for HeaderComp {
 impl Renderable<HeaderComp> for HeaderComp {
     fn view(&self) -> Html<Self> {
         html! {
-            <div class="absolute pin-t h-2 w-full bg-blue",></div>
+            <div class="header",>
+                <div class="absolute pin-t h-2 w-full bg-blue",></div>
+                <h1 class="text-grey-darkest text-center mt-12 text-5xl font-thin",>{ "Super" }<span class="font-black",>{ "WASM" }</span></h1>
+                <p class="text-center text-grey-darkest mt-5",>{ "Some tests with WebAssembly and Rust" }</p>
+            </div>
         }
     }
 }

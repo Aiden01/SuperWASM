@@ -7,6 +7,7 @@ pub mod components;
 use yew::services::ConsoleService;
 use yew::prelude::*;
 use self::components::header::HeaderComp;
+use self::components::posts::PostsComp;
 
 pub struct Model {
     console: ConsoleService,
@@ -41,7 +42,7 @@ impl Renderable<Model> for Model {
         html! {
             <div>
                 <HeaderComp: />
-                <h1 class="text-grey-darkest text-center mt-12 text-5xl",>{ "Super" }<span class="font-black",>{ "WASM" }</span></h1>
+                <PostsComp: />
             </div>
         }
     }
